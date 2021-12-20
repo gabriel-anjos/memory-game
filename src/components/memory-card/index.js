@@ -10,7 +10,7 @@ function createMemoryCard(){
             </img>`;
 
     $MemoryCard.classList.add('Memory-card');
-    $root.insertBefore($MemoryCard,null);           
+    $wrapCards.insertBefore($MemoryCard,null);           
     $MemoryCard.insertAdjacentHTML('afterbegin',$icon)
 }
 
@@ -28,7 +28,7 @@ function createMemoryCardFront(){
     
 $MemoryCardFront.classList.add('Memory-card')
 $MemoryCardFront.classList.add('-front')
-$root.insertBefore($MemoryCardFront,null)
+$wrapCards.insertBefore($MemoryCardFront,null)
 
 $MemoryCardFront.insertAdjacentHTML('afterbegin',$iconC)
 
