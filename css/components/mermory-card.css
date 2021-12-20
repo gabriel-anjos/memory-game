@@ -15,7 +15,7 @@
 }
 
 
-.Memory-card  .icon{
+.Memory-card > .icon{
     width: 100px;
     height: 100px;
      /* position: absolute;
