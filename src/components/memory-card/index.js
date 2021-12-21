@@ -1,4 +1,6 @@
-function createMemoryCard(){
+
+    //toda funcao foi convertida para arrow function
+// function createMemoryCard(){
 
     // const $MemoryCard = document.createElement('article');
 
@@ -14,23 +16,56 @@ function createMemoryCard(){
     // $MemoryCard.insertAdjacentHTML('afterbegin',$icon)
 
 
-    const $memoryCard = `
-        <article class="Memory-card">
-            <img  class='icon'
-            onClick=handleClick() 
-                src='img/icon-collabcode.png' 
+//     const $memoryCard = `
+//         <article class="Memory-card">
+//             <img  class='icon'
+//             onClick=handleClick() 
+//                 src='img/icon-collabcode.png' 
+//                 alt='gale mascote do collabcode'>
+//             </img>
+        
+        
+//         </article>
+        
+//     `;
+//     return $memoryCard; 
+// }
+
+const createMemoryCard = ()=>
+    `
+    <article class="Memory-card">
+        <img  class='icon'
+        onClick=handleClick() 
+            src='img/icon-collabcode.png' 
+            alt='gale mascote do collabcode'>
+        </img>
+    
+    
+    </article>
+    `; 
+
+
+
+const createMemoryCardFront = ()=>
+
+    `
+        <article class="Memory-card -front">
+            <img  class='icon' 
+            onClick="handleClick()"
+                src='img/icon-c.png' 
                 alt='gale mascote do collabcode'>
             </img>
-        
-        
+            
         </article>
-        
+
     `;
-    return $memoryCard; 
+
+
+
+function handleClick(){
+    console.log("ae")
 }
-
-
-function createMemoryCardFront(){
+// function createMemoryCardFront(){
         //refatoração da criaçao e iserçao do componente 
 //     const $MemoryCardFront = document.createElement('article');
 
@@ -48,20 +83,17 @@ function createMemoryCardFront(){
 // $MemoryCardFront.insertAdjacentHTML('afterbegin',$iconC)
 
 
-    const $memoryCard = `
-        <article class="Memory-card -front">
-            <img  class='icon' 
-            onClick="handleClick()"
-                src='img/icon-c.png' 
-                alt='gale mascote do collabcode'>
-            </img>
+//     const $memoryCard = `
+//         <article class="Memory-card -front">
+//             <img  class='icon' 
+//             onClick="handleClick()"
+//                 src='img/icon-c.png' 
+//                 alt='gale mascote do collabcode'>
+//             </img>
             
-        </article>
+//         </article>
 
-    `;
-    return $memoryCard;
-}
+//     `;
+//     return $memoryCard;
+// }
 
-function handleClick(){
-    console.log("ae")
-}
