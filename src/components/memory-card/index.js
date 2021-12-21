@@ -31,14 +31,14 @@
 //     return $memoryCard; 
 // }
 
-const createMemoryCard = (nameclass)=>{
-     return`
+const createMemoryCard = (src,alt,nameclass)=>
+     `
     
     <article class="Memory-card ${nameclass}">
         <img  class='icon'
         onClick=handleClick() 
-            src='${nameclass=="-front" ?  "img/icon-c.png" :  "img/icon-collabcode.png" }' 
-            alt='gale mascote do collabcode'>
+            src='${src}' 
+            alt='${alt}'>
         </img>
     
     
@@ -46,7 +46,7 @@ const createMemoryCard = (nameclass)=>{
     `; 
 
 
-}
+
 
 
 
