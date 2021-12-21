@@ -31,12 +31,19 @@
 //     return $memoryCard; 
 // }
 
-const createMemoryCard = ()=>
-    `
-    <article class="Memory-card">
+const createMemoryCard = (nameclass)=>{
+    let src = "img/icon-collabcode.png"
+    if(nameclass =="-front"){
+        src = "img/icon-c.png";
+
+    };
+
+    return`
+    
+    <article class="Memory-card ${nameclass}">
         <img  class='icon'
         onClick=handleClick() 
-            src='img/icon-collabcode.png' 
+            src='${src}' 
             alt='gale mascote do collabcode'>
         </img>
     
@@ -45,26 +52,27 @@ const createMemoryCard = ()=>
     `; 
 
 
-
-const createMemoryCardFront = ()=>
-
-    `
-        <article class="Memory-card -front">
-            <img  class='icon' 
-            onClick="handleClick()"
-                src='img/icon-c.png' 
-                alt='gale mascote do collabcode'>
-            </img>
-            
-        </article>
-
-    `;
-
-
-
-function handleClick(){
-    console.log("ae")
 }
+
+
+
+// const createMemoryCardFront = ()=>
+
+//     `
+//         <article class="Memory-card -front">
+//             <img  class='icon' 
+//             onClick="handleClick()"
+//                 src='img/icon-c.png' 
+//                 alt='gale mascote do collabcode'>
+//             </img>
+            
+//         </article>
+
+//     `;
+
+
+
+const handleClick = ()=>console.log("ae")
 // function createMemoryCardFront(){
         //refatoração da criaçao e iserçao do componente 
 //     const $MemoryCardFront = document.createElement('article');
