@@ -1,10 +1,10 @@
-.wrap-cards{
+.cards-wrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding-top: 10px;
 }
 
-.wrap-cards  .Memory-card{
+.cards-wrapper  .Memory-card{
     margin-bottom: 10px;
 }
