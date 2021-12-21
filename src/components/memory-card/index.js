@@ -32,18 +32,12 @@
 // }
 
 const createMemoryCard = (nameclass)=>{
-    let src = "img/icon-collabcode.png"
-    if(nameclass =="-front"){
-        src = "img/icon-c.png";
-
-    };
-
-    return`
+     return`
     
     <article class="Memory-card ${nameclass}">
         <img  class='icon'
         onClick=handleClick() 
-            src='${src}' 
+            src='${nameclass=="-front" ?  "img/icon-c.png" :  "img/icon-collabcode.png" }' 
             alt='gale mascote do collabcode'>
         </img>
     
