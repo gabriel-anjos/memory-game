@@ -31,19 +31,26 @@
 //     return $memoryCard; 
 // }
 
-const createMemoryCard = (src,alt,nameclass)=>
-     `
-    
-    <article class="Memory-card ${nameclass}">
-        <img  class='icon'
-        onClick=handleClick() 
-            src='${src}' 
-            alt='${alt}'>
-        </img>
-    
-    
-    </article>
-    `; 
+//passsando um objectdestructuring como parametro
+const createMemoryCard = ({src,alt,nameclass})=>
+    //object destructuring
+    // const {src,alt,nameclass}= card;
+    // return
+   `
+   <article class="Memory-card ${nameclass}">
+       <img  class='icon'
+       onClick=handleClick() 
+           src='${src}' 
+           alt='${alt}'>
+       </img>
+   
+   
+   </article>
+   `; 
+
+
+
+
 
 
 
