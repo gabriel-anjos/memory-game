@@ -13,7 +13,7 @@ const createMemoryCard = memoryCard();
 
 //passando o json direto sem precisar criar a varialvel como acima.
 const $memoryCardC = createMemoryCard({
-    nameclass: "-front ",
+    
     src: "img/icon-c.png",
     alt:"icone de um livro c"
 })
@@ -21,9 +21,9 @@ const $memoryCardC = createMemoryCard({
 
 
 
-const $memoryCardJava = createMemoryCard({src:"img/icon-java.png",alt:"icone de um livro java",nameclass:"-front"});
-const $memoryCardPHP = createMemoryCard({src:"img/icon-php.png",alt:"icone de um livro php", nameclass:"-front"});
-const $memoryCardBug = createMemoryCard({src:"img/icon-bug.png",alt:"icone de um bug",nameclass:"-front"});
+const $memoryCardJava = createMemoryCard({src:"img/icon-java.png",alt:"icone de um livro java"});
+const $memoryCardPHP = createMemoryCard({src:"img/icon-php.png",alt:"icone de um livro php"});
+const $memoryCardBug = createMemoryCard({src:"img/icon-bug.png",alt:"icone de um bug"});
 
 // $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardBug);

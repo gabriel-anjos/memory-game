@@ -17,9 +17,10 @@ function createCardsWrapper(){
         flex-wrap: wrap;
         justify-content: space-around;
         padding-top: 10px;
+        width: 100vw
     }
     
-    .cards-wrapper  .Memory-card{
+    .cards-wrapper > .memory-card{
         margin-bottom: 10px;
     }
 `

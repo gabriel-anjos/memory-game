@@ -11,13 +11,13 @@
     //             alt='gale mascote do collabcode'>
     //         </img>`;
 
-    // $MemoryCard.classList.add('Memory-card');
+    // $MemoryCard.classList.add(.memory-card 'card');
     // $wrapCards.insertBefore($MemoryCard,null);           
     // $MemoryCard.insertAdjacentHTML('afterbegin',$icon)
 
 
 //     const $memoryCard = `
-//         <article class="Memory-card">
+//         <article class=.memory-card "card">
 //             <img  class='icon'
 //             onClick=handleClick() 
 //                 src='img/icon-collabcode.png' 
@@ -36,9 +36,15 @@ const memoryCard = ()=>{
     const $head = document.querySelector("head");
     const $style = document.createElement("style")
     $style.textContent=`
-        .Memory-card{
+        .memory-card{
         width: 155px;
         height: 155px;
+        position: relative;
+        }
+
+        .memory-card .card{
+        width:100%;
+        height:100%;
         background-color: #f25a70;
         border-radius: 30px;
         display: flex;
@@ -46,13 +52,21 @@ const memoryCard = ()=>{
         align-items: center;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16);
         position: relative;
-        cursor: pointer;    
+        cursor: pointer;
+        position:absolute;
         /* display: inline-block; */
         /* display: inline-flex; */
     }
     
+    .memory-card.-active .card{
+        display:none
+    }
     
-    .Memory-card > .icon{
+    .memory-card.-active .card.-front{
+        display:flex
+    }
+    
+    .memory-card .card > .icon{
         width: 100px;
         height: 100px;
          /* position: absolute;
@@ -60,7 +74,7 @@ const memoryCard = ()=>{
         left: 50%;
         transform: translate(-50%,-50%); */
     }
-    .Memory-card.-front::before{
+    .memory-card .card.-front::before{
         content:'';
         width: 90px;
         height: 90px;
@@ -69,11 +83,11 @@ const memoryCard = ()=>{
         position: absolute;
     }
     
-    .Memory-card.-front > .icon{
+    .memory-card .card.-front > .icon{
         position: absolute;
         transform: translateY(-12px);
     }
-    .Memory-card.-front{
+    .memory-card .card.-front{
         background-color: #fff;
     }
     
@@ -84,20 +98,31 @@ const memoryCard = ()=>{
 
     
     return ({src,alt,nameclass})=> `
-        <article class="Memory-card ${nameclass}">
+        <div class="memory-card " onClick="handleClick(this)" >
+        <article class="card -front">
         <img  class='icon'
-        onClick=handleClick() 
            src='${src}' 
            alt='${alt}'>
         </img>
    
    
         </article>
+        <article class="card">
+        <img  class='icon'
+           src='img/icon-collabcode.png' 
+           alt='o mascote da collabcode gale'>
+        </img>
+   
+   
+        </article>
+        </div>
         `;
      
 };
    
-
+const handleClick = $component=>{
+    $component.classList.toggle("-active");
+}
 
 
 
@@ -108,7 +133,7 @@ const memoryCard = ()=>{
 // const createMemoryCardFront = ()=>
 
 //     `
-//         <article class="Memory-card -front">
+//         <article class=.memory-card "card -front">
 //             <img  class='icon' 
 //             onClick="handleClick()"
 //                 src='img/icon-c.png' 
@@ -121,7 +146,7 @@ const memoryCard = ()=>{
 
 
 
-const handleClick = ()=>console.log("ae")
+
 // function createMemoryCardFront(){
         //refatoração da criaçao e iserçao do componente 
 //     const $MemoryCardFront = document.createElement('article');
@@ -133,7 +158,7 @@ const handleClick = ()=>console.log("ae")
 
 
     
-// $MemoryCardFront.classList.add('Memory-card')
+// $MemoryCardFront.classList.add(.memory-card 'card')
 // $MemoryCardFront.classList.add('-front')
 // $wrapCards.insertBefore($MemoryCardFront,null)
 
@@ -141,7 +166,7 @@ const handleClick = ()=>console.log("ae")
 
 
 //     const $memoryCard = `
-//         <article class="Memory-card -front">
+//         <article class=.memory-card "card -front">
 //             <img  class='icon' 
 //             onClick="handleClick()"
 //                 src='img/icon-c.png' 
