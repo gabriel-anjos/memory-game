@@ -31,24 +31,72 @@
 //     return $memoryCard; 
 // }
 
-//passsando um objectdestructuring como parametro
-const createMemoryCard = ({src,alt,nameclass})=>
-    //object destructuring
-    // const {src,alt,nameclass}= card;
-    // return
-   `
-   <article class="Memory-card ${nameclass}">
-       <img  class='icon'
-       onClick=handleClick() 
+//passsando um objectdestructuring como parame
+const memoryCard = ()=>{
+    const $head = document.querySelector("head");
+    const $style = document.createElement("style")
+    $style.textContent=`
+        .Memory-card{
+        width: 155px;
+        height: 155px;
+        background-color: #f25a70;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        position: relative;
+        cursor: pointer;    
+        /* display: inline-block; */
+        /* display: inline-flex; */
+    }
+    
+    
+    .Memory-card > .icon{
+        width: 100px;
+        height: 100px;
+         /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%); */
+    }
+    .Memory-card.-front::before{
+        content:'';
+        width: 90px;
+        height: 90px;
+        background-color: #d4d4d4;
+        border-radius: 50%;
+        position: absolute;
+    }
+    
+    .Memory-card.-front > .icon{
+        position: absolute;
+        transform: translateY(-12px);
+    }
+    .Memory-card.-front{
+        background-color: #fff;
+    }
+    
+    
+    `;
+
+    $head.insertBefore($style,null)
+
+    
+    return ({src,alt,nameclass})=> `
+        <article class="Memory-card ${nameclass}">
+        <img  class='icon'
+        onClick=handleClick() 
            src='${src}' 
            alt='${alt}'>
-       </img>
+        </img>
    
    
-   </article>
-   `; 
-
-
+        </article>
+        `;
+     
+};
+   
 
 
 

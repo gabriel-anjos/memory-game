@@ -1,6 +1,5 @@
 const $root = document.querySelector("#root");
 const $cardsWrapper = createCardsWrapper();
-const $memoryCard = createMemoryCard("img/icon-collabcode.png","gale mascote da collabcode");
 //criaçao do objeto json
 // const languageC = {
 //     nameclass: "-front ",
@@ -10,6 +9,7 @@ const $memoryCard = createMemoryCard("img/icon-collabcode.png","gale mascote da 
 //atribuindo o objeto
 // const $memoryCardC = createMemoryCard(languageC);
 
+const createMemoryCard = memoryCard();
 
 //passando o json direto sem precisar criar a varialvel como acima.
 const $memoryCardC = createMemoryCard({
@@ -29,11 +29,11 @@ const $memoryCardBug = createMemoryCard({src:"img/icon-bug.png",alt:"icone de um
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardBug);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPHP);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJava);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPHP);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardBug);
-
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJava);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPHP);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
+
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardBug);
 
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
 $root.insertAdjacentElement("beforeend", $cardsWrapper);
