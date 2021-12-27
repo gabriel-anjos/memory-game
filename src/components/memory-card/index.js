@@ -120,6 +120,7 @@ const memoryCard = ()=>{
      
 };
    
+let score = 0;
 const handleClick = $component=>{
     if(!$component.classList.contains("-active")){
         if(qtdActiveMemoryCard < 2){
@@ -130,6 +131,17 @@ const handleClick = $component=>{
         }
 
         if(qtdActiveMemoryCard === 1){
+            const $memoryCards = document.querySelectorAll(".memory-card.-active")
+
+            if($memoryCards[0].querySelector(".-front .icon").getAttribute("src")===
+            $memoryCards[1].querySelector(".-front .icon").getAttribute("src")){
+                
+                score++;
+                console.log("valor do score",score)
+            }
+            
+
+
             setTimeout(()=>{
                 const $activeMemoryCard = document.querySelectorAll(".memory-card.-active")
             
