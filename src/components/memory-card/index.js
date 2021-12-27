@@ -58,11 +58,15 @@ const memoryCard = ()=>{
         /* display: inline-flex; */
     }
     
-    .memory-card.-active .card{
+    .memory-card.-active .card,
+    .memory-card.-score .card
+    {
         display:none
     }
     
-    .memory-card.-active .card.-front{
+    .memory-card.-active .card.-front,
+    .memory-card.-score .card.-front
+    {
         display:flex
     }
     
@@ -137,21 +141,27 @@ const handleClick = $component=>{
             $memoryCards[1].querySelector(".-front .icon").getAttribute("src")){
                 
                 score++;
-                console.log("valor do score",score)
+                $memoryCards.forEach($memoryCard=>{
+                    $memoryCard.classList.add("-score");
+                    $memoryCard.classList.remove("-active");
+                })
+            }else{
+
+                setTimeout(()=>{
+                    const $activeMemoryCard = document.querySelectorAll(".memory-card.-active")
+                
+                    $activeMemoryCard.forEach($memoryCard => {
+                        $memoryCard.classList.remove("-active");
+                    });
+    
+                    qtdActiveMemoryCard = 0
+                
+                },1000);
+
             }
             
 
 
-            setTimeout(()=>{
-                const $activeMemoryCard = document.querySelectorAll(".memory-card.-active")
-            
-                $activeMemoryCard.forEach($memoryCard => {
-                    $memoryCard.classList.remove("-active");
-                });
-
-                qtdActiveMemoryCard = 0
-            
-            },1000);
             
         };
 
