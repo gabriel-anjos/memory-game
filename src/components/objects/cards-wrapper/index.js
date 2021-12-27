@@ -34,7 +34,6 @@ $cardsWrapper.addEventListener("click" , ()=>{
 //         qtdActiveMemoryCard = qtdActiveMemoryCard - 1;
 //     }
 
-    console.log("qrd" , qtdActiveMemoryCard);
 });
 
 
