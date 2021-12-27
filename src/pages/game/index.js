@@ -10,6 +10,8 @@
     // }
     //atribuindo o objeto
     // const $memoryCardC = createMemoryCard(languageC);
+    const $scoreBar = scoreBar.create();
+    
     const createMemoryCard = memoryCard.create();
 
 
@@ -36,6 +38,7 @@
     $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
     $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardBug);
     $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
+    $root.insertAdjacentHTML("afterbegin",$scoreBar);
     $root.insertAdjacentElement("beforeend", $cardsWrapper);
                 
 })();
