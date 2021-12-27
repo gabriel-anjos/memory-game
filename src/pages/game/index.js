@@ -32,9 +32,7 @@ $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJava);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJava);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPHP);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
-
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardBug);
-
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
 $root.insertAdjacentElement("beforeend", $cardsWrapper);
                 
