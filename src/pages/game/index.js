@@ -11,6 +11,7 @@
     //atribuindo o objeto
     // const $memoryCardC = createMemoryCard(languageC);
     const $scoreBar = scoreBar.create();
+    const $gameButton = gameButton.render();
     
     const createMemoryCard = memoryCard.create();
 
@@ -40,5 +41,7 @@
     $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
     $root.insertAdjacentHTML("afterbegin",$scoreBar);
     $root.insertAdjacentElement("beforeend", $cardsWrapper);
+    $root.insertAdjacentHTML("beforeend",$gameButton);
+
                 
 })();

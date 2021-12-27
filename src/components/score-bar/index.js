@@ -30,7 +30,7 @@ const scoreBar = (function(){
         return`
         
         <header class="score-bar">
-            <span class="score">1</span>
+            <span class="score">0</span>
         </header>
 
         `
