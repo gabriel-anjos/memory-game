@@ -10,8 +10,8 @@
     // }
     //atribuindo o objeto
     // const $memoryCardC = createMemoryCard(languageC);
+    const createMemoryCard = memoryCard.create();
 
-    const createMemoryCard = memoryCard();
 
     //passando o json direto sem precisar criar a varialvel como acima.
     const $memoryCardC = createMemoryCard({

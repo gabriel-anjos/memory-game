@@ -1,4 +1,4 @@
-
+const memoryCard = (function(){
     //toda funcao foi convertida para arrow function
 // function createMemoryCard(){
 
@@ -32,7 +32,8 @@
 // }
 
 //passsando um objectdestructuring como parame
-const memoryCard = ()=>{
+const module = {};
+module.create = ()=>{
     const $head = document.querySelector("head");
     const $style = document.createElement("style")
     $style.textContent=`
@@ -102,7 +103,7 @@ const memoryCard = ()=>{
 
     
     return ({src,alt,nameclass})=> `
-        <div class="memory-card " onClick="handleClick(this)" >
+        <div class="memory-card " onClick="memoryCard.handleClick(this)" >
         <article class="card -front">
         <img  class='icon'
            src='${src}' 
@@ -122,19 +123,19 @@ const memoryCard = ()=>{
         </div>
         `;
      
-};
-   
-const handleClick = $component=>{
+}
+
+module.handleClick = $component=>{
     if(!$component.classList.contains("-active")){
-       activeMemoryCard($component);
-       checkSure();
+       module._activeMemoryCard($component);
+       module._checkSure();
 
        
 
     }
-}
+} 
 
-function activeMemoryCard($component){
+module._activeMemoryCard = ($component)=>{
     if(qtdActiveMemoryCard < 2){
 
             
@@ -143,7 +144,7 @@ function activeMemoryCard($component){
     }
 }
 
-function checkSure(){
+module._checkSure =()=>{
 
     if(qtdActiveMemoryCard === 1){
         const $activeMemoryCards = document.querySelectorAll(".memory-card.-active")
@@ -230,4 +231,8 @@ function checkSure(){
 //     `;
 //     return $memoryCard;
 // }
-
+return {
+    create:module.create,
+    handleClick:module.handleClick 
+}
+})();
