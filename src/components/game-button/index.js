@@ -28,16 +28,18 @@ module._style=()=>{
     $head.insertBefore($style,null);
 }
 
-module.render=()=>{
+
+module.render=content=>{
     module._style();
 
     return`
-    <button class ="game-button">Start</button>
+    <button class ="game-button">${content}</button>
     
     `
 }
 
 return{
-    render:module.render
+    render:module.render,
+    handleClick: module.handleClick
 };
 })();

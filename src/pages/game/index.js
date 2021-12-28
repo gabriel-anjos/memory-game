@@ -12,7 +12,7 @@
     // const $memoryCardC = createMemoryCard(languageC);
     const $scoreBar = scoreBar.create();
     const $transparencyLayer = transpareceLayer.render();
-    const $gameButton = gameButton.render();
+    const $gameButton = gameButton.render("vai");
     
     const createMemoryCard = memoryCard.create();
 
