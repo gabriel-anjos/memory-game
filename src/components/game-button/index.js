@@ -22,8 +22,16 @@ module._style=()=>{
         text-transform: upercase;
         box-shadow: 0px 4px 8px #3a4042 ;
         cursor: pointer;
+        transition: opacity 200ms linear, transform, 300ms linear;
     }
     
+    .game-button.-disable{
+        opacity:0;
+        transform: translate(-50%,-35%) scale(2)
+    }
+
+
+
     `;
     $head.insertBefore($style,null);
 }

@@ -1,4 +1,4 @@
-const transpareceLayer = (function(){
+const transparencyLayer = (function(){
     const module= {};
     module._style=()=>{
         const $head = document.querySelector("head");
@@ -12,7 +12,12 @@ const transpareceLayer = (function(){
                 width:100vw;
                 position:absolute;
                 top:0;
+                transition: opacity 200ms 200ms linear;
             }
+            .transparency-layer.-disable{
+                opacity: 0;
+            }
+
         `;
         $head.insertBefore($style,null)
     }
