@@ -8,6 +8,11 @@ const labelCollabcode =(function(){
             .label-collabcode{
                 color: #3a4042;
                 font-size: 16px;
+                display: block;
+                opacity:0.5;
+            }
+            .input-collabcode + .label-collabcode{
+                margin-top:30px;
             }
         
         `

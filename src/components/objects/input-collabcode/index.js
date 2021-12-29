@@ -6,7 +6,7 @@ const inputCollabcode = (function(){
         const $style = document.createElement("style");
         $style.textContent=`
             .input-collabcode{
-                display:block;
+                box-sizing:border-box;
                 width:100%;
                 color: #3a4042;
                 font-size: 18px;
@@ -15,6 +15,7 @@ const inputCollabcode = (function(){
                 padding:12px 12px;
                 outline:none;
             }
+           
         
         `;
 
