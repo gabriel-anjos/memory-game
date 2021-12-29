@@ -5,9 +5,15 @@ const logoCollabcode = (function(){
         const $style = document.createElement("style");
         $style.textContent=`
             .logo-collabcode{
-                width:175px
+                border: solid 40px white;
+                border-radius: 50%;
+                display:inline-block;
+                background-color:white;
             }
-        
+            .logo-collabcode > .logo{
+                width: 175px;
+
+            }
         `;
         $head.insertAdjacentElement('beforeend',$style)
     }
@@ -15,7 +21,11 @@ const logoCollabcode = (function(){
     module.render =()=>{
         module._style();
         
-        return`<img class="logo-collabcode" src="/img/icon-collabcode.png">`
+        return`
+        <figure class="logo-collabcode">
+        <img class="logo" src="/img/icon-collabcode.png">
+        </figure>
+        `;
 
     } 
     
