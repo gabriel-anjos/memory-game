@@ -19,7 +19,8 @@ const formLogin = (function(){
         const $usernameLabel = labelCollabcode.render("username or email");
         const $usernameInput = inputCollabcode.render({placeholder:"example@example.com"});
         const $passwordLabel = labelCollabcode.render("password");
-        const $passwordInput = inputCollabcode.render({placeholder:"**********",type:"password"});
+        const $passwordInput = inputCollabcode.render({id:"password",placeholder:"8 digits",type:"password"});
+        const $eyeCollabcode = eyeCollabcode.render({attrFor:"password"});
         const $linkCollab = linkCollab.render({href:"#",content:"Forget password?"});
        
         const $buttonCollabcode = buttonCollabcode.render("login");
@@ -29,6 +30,7 @@ const formLogin = (function(){
             ${$usernameInput}
             ${$passwordLabel}
             ${$passwordInput}
+            ${$eyeCollabcode}
             ${$linkCollab}
             ${$buttonCollabcode}
 

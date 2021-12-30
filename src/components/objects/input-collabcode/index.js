@@ -22,10 +22,10 @@ const inputCollabcode = (function(){
         $head.insertAdjacentElement("beforeend",$style);
     }
 
-    module.render=({placeholder,type})=>{
+    module.render=({id,placeholder,type})=>{
         module._style();
             
-            return`<input type="${type || "text"}" class="input-collabcode" placeholder=${placeholder || "" }></input>`
+            return`<input id="${id || ""}"type="${type || "text"}" class="input-collabcode" placeholder="${placeholder || "" }"></input>`
     }
 
     return{
