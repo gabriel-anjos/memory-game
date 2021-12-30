@@ -16,9 +16,6 @@ const buttonCollabcode = (function(){
                 background-color: #f25a70;
 
             }
-            .input-collabcode + .button-collabcode{
-                margin-top:45px;
-            }
         `;
         $head.insertAdjacentElement("beforeend",$style);
     }

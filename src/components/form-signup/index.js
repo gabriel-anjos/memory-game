@@ -6,7 +6,8 @@ const formSignup = (function(){
         const $style = document.createElement("style");
         $style.textContent=`
             .form-signup{
-                padding:0 35px 40px ;
+                padding-left: 35px;
+                padding-right: 35px;
 
             }
         
