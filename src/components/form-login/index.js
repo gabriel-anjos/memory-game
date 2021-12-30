@@ -1,4 +1,4 @@
-const formSignup = (function(){
+const formLogin = (function(){
     const module = {}
 
     module._style=()=>{
@@ -15,24 +15,21 @@ const formSignup = (function(){
     }
 
     module._children=()=>{
-        const $emailLabel = labelCollabcode.render("email");
-        const $emailInput = inputCollabcode.render({placeholder:"example@gmail.com",type:"email"});
-        const $usernameLabel = labelCollabcode.render("username");
-        const $usernameInput = inputCollabcode.render({placeholder:"example-username"});
+       
+        const $usernameLabel = labelCollabcode.render("username or email");
+        const $usernameInput = inputCollabcode.render({placeholder:"example@example.com"});
         const $passwordLabel = labelCollabcode.render("password");
         const $passwordInput = inputCollabcode.render({placeholder:"**********",type:"password"});
-        const $confirmPasswordLabel = labelCollabcode.render("confirm password");
-        const $confirmPasswordInput = inputCollabcode.render({placeholder:"**********",type:"password"});
-        const $buttonCollabcode = buttonCollabcode.render("signup");
+        const $linkCollab = linkCollab.render({href:"#",content:"Forget password?"});
+       
+        const $buttonCollabcode = buttonCollabcode.render("login");
         
-        return`${$emailLabel}
-            ${$emailInput}
+        return`
             ${$usernameLabel}
             ${$usernameInput}
             ${$passwordLabel}
             ${$passwordInput}
-            ${$confirmPasswordLabel}
-            ${$confirmPasswordInput}
+            ${$linkCollab}
             ${$buttonCollabcode}
 
         `;

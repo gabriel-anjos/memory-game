@@ -1,17 +1,18 @@
-(function(){
+ (function(){
     const $root = document.querySelector("#root");
-    const $loginButton = flatButton.render("Log in");
-    const $signupButton = flatButton.render("Sign up",true);
+    const $loginButton = flatButton.render("Log in",true);
+    const $signupButton = flatButton.render("Sign up",false);
     const $logoCollabcode = logoCollabcode.render();
-    const $titleCollabcode = titleCollabcode.render("welcome!");
+    const $titleCollabcode = titleCollabcode.render("hello!");
     const $logoWrapper = logoWrapper.render($logoCollabcode,$titleCollabcode);
-    const $formSignup = formSignup.render();
-   
+    const $formLogin = formLogin.render();
+
     $root.insertAdjacentHTML("beforeend",$loginButton);
     $root.insertAdjacentHTML("beforeend",$signupButton);
     $root.insertAdjacentHTML("beforeend",$logoWrapper);
-    $root.insertAdjacentHTML("beforeend",$formSignup);
-    
+    $root.insertAdjacentHTML("beforeend",$formLogin);
 
 
 })();
+
+
