@@ -23,7 +23,7 @@ const formLogin = (function(){
         const $eyeCollabcode = eyeCollabcode.render({attrFor:"password"});
         const $linkCollab = linkCollab.render({href:"#",content:"Forget password?"});
        
-        const $buttonCollabcode = buttonCollabcode.render("login");
+        const $buttonCollabcode = buttonCollabcode.render({content:"login",path:"game"});
         
         return`
             ${$usernameLabel}

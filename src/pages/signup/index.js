@@ -1,7 +1,7 @@
-(function(){
+const signup = (function(){
     const $root = document.querySelector("#root");
-    const $loginButton = flatButton.render("Log in");
-    const $signupButton = flatButton.render("Sign up",true);
+    const $loginButton = flatButton.render("Log in",false,"login");
+    const $signupButton = flatButton.render("Sign up",true,"signup");
     const $logoCollabcode = logoCollabcode.render();
     const $titleCollabcode = titleCollabcode.render("welcome!");
     const $logoWrapper = logoWrapper.render($logoCollabcode,$titleCollabcode);
@@ -14,4 +14,4 @@
     
 
 
-})();
+});

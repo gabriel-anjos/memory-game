@@ -23,7 +23,7 @@ const formSignup = (function(){
         const $passwordInput = inputCollabcode.render({placeholder:"**********",type:"password"});
         const $confirmPasswordLabel = labelCollabcode.render("confirm password");
         const $confirmPasswordInput = inputCollabcode.render({placeholder:"**********",type:"password"});
-        const $buttonCollabcode = buttonCollabcode.render("signup");
+        const $buttonCollabcode = buttonCollabcode.render({content:"signup",path:"login"});
         
         return`${$emailLabel}
             ${$emailInput}
