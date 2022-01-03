@@ -1,5 +1,5 @@
 
-(function init(){
+const Game = (function init(){
     const $root = document.querySelector("#root");
     const $cardsWrapper = createCardsWrapper();
     //criaçao do objeto json
@@ -44,4 +44,4 @@
 
     
                 
-})();
+});

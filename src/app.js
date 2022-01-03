@@ -2,11 +2,18 @@
     
     const {hash} = window.location;
     const paths =[];
-    paths[""]=login;
-    paths["#/login"]=login;
+    paths[""]= login;
+    paths["#/login"]= login;
     paths["#/signup"] = signup;
+    paths["#/game"] = Game;
+    paths["#/404"] = status404;
 
-    paths[hash]();
+    if(paths[hash] === undefined){
+        paths["#/404"]();
+    }else{
+
+        paths[hash]();
+    };
     
     // if(hash === "#/signup"){
     //     signup();

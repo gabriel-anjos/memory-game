@@ -27,7 +27,6 @@ const flatButton = (function(){
     };
 
     module.handleClick=path=>{
-         console.log(path);
          window.location.hash = `#/${path}`;
     }
 
